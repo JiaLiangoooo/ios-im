@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:scripts"
+      name = "scripts">
+      <FileRef
+         location = "group:build-universal-framework.sh">
+      </FileRef>
+      <FileRef
+         location = "group:generate_namespace_header.sh">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:IMSDK/IMSDK.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:IMSDKTest/IMSDKTest.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,43 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/Star/Library/Developer/Xcode/DerivedData/SDK-gpuyaxlazzjcgbdiitcrcoceyrgz/Build/Products/Debug-iphonesimulator/IMSDK.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "IMSDK-Swift.h",
+          'external-contents': "/Users/Star/Library/Developer/Xcode/DerivedData/SDK-gpuyaxlazzjcgbdiitcrcoceyrgz/Build/Products/Debug-iphonesimulator/IMSDK.framework/Headers/IMSDK-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "IMSDK.h",
+          'external-contents': "/Users/Star/work/icsoc/code/ios-im/IMSDK/IMSDK/IMSDK.h"
+        },
+        {
+          'type': 'file',
+          'name': "IMSDKTest.h",
+          'external-contents': "/Users/Star/work/icsoc/code/ios-im/IMSDK/IMSDK/IMSDKTest.h"
+        },
+        {
+          'type': 'file',
+          'name': "IMSDKView.h",
+          'external-contents': "/Users/Star/work/icsoc/code/ios-im/IMSDK/IMSDK/IMSDKView.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Star/Library/Developer/Xcode/DerivedData/SDK-gpuyaxlazzjcgbdiitcrcoceyrgz/Build/Products/Debug-iphonesimulator/IMSDK.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Star/work/icsoc/code/ios-im/IMSDK/build/IMSDK.build/Debug-iphonesimulator/IMSDK.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

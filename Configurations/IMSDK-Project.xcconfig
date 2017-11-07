@@ -1,0 +1,10 @@
+//
+//  IMSDK-Project.xcconfig
+//  IMSDK
+//
+//  Created by Deemo on 2017/11/6.
+//  Copyright © 2017年 ICSOC. All rights reserved.
+//
+
+GCC_PREFIX_HEADER = IMSDK/IMSDK-Prefix.pch
+GCC_PRECOMPILE_PREFIX_HEADER = YES
