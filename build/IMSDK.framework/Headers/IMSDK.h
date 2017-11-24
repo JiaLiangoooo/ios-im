@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <IMSDK/IMSDKTest.h>
 #import <IMSDK/IMSDKView.h>
+#import <IMSDK/IMSDKMessageTest.h>
 
 //! Project version number for IMSDK.
 FOUNDATION_EXPORT double IMSDKVersionNumber;

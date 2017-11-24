@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8A22F751FB029E300305EC7 /* IMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A22F761FB029E300305EC7 /* IMSDK.framework */; };
+		F82887F61FC7F1D200DED703 /* IMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82887F51FC7F1D200DED703 /* IMSDK.framework */; };
 		F8A22FB61FB06A2800305EC7 /* IMSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F8A22FB51FB06A2800305EC7 /* IMSDK.bundle */; };
 		F8E1F3251FB028A20060E481 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E1F3241FB028A20060E481 /* AppDelegate.m */; };
 		F8E1F3281FB028A20060E481 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E1F3271FB028A20060E481 /* ViewController.m */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8A22F761FB029E300305EC7 /* IMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82887F51FC7F1D200DED703 /* IMSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMSDK.framework; path = ../build/IMSDK.framework; sourceTree = "<group>"; };
 		F8A22FB51FB06A2800305EC7 /* IMSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = IMSDK.bundle; path = ../../build/IMSDK.bundle; sourceTree = "<group>"; };
 		F8E1F3201FB028A20060E481 /* IMSDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMSDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E1F3231FB028A20060E481 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A22F751FB029E300305EC7 /* IMSDK.framework in Frameworks */,
+				F82887F61FC7F1D200DED703 /* IMSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,7 @@
 		F8A22F741FB029E300305EC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F8A22F761FB029E300305EC7 /* IMSDK.framework */,
+				F82887F51FC7F1D200DED703 /* IMSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

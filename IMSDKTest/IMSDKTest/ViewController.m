@@ -18,7 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [IMSDKTest printTest];
-
+    
+    IMSDKMessageTest *test = [IMSDKMessageTest new];
+    [test sendMessage];
+    [test getMessage];
     [self creatIMSDKView];
 }
 

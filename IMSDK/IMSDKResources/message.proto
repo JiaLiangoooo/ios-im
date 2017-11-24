@@ -1,0 +1,118 @@
+syntax = "proto3";
+
+package proto;
+
+
+//发送消息
+message SendMessage {
+	string  AppKey = 1;   //客户编号
+	string  From = 2;     //发送者
+	string  To = 3;        // 接收消息者
+	uint32  ChatType = 4;  //消息类型 0 私聊 1 群聊 ...
+	uint32  MsgType = 5;   // 消息类型：音频，视频，图片，表情，文件， 系统消息
+
+	uint32  CreateTime = 6;  // 创建时间
+	string  Content = 7;     // 消息内容
+
+	uint32  AudioDuration = 8;  // 音频时长  //如果是音频消息 需要该参数
+	string  Thumbnail = 9;      //缩略图URL
+
+	uint32	SourceType = 10;  //渠道来源
+	uint64  Sequence = 11;	//sequence number
+	uint64	Id =12;        //消息Id
+	uint32	Status =13;         //消息状态 0 有效 1 撤回 2 删除
+}
+
+message MessageReply{
+	int32	ErrorCode =1;       //返回值，正常为0
+	string	ErrorString =2;  //错误原因， 如果ErrorCode等于0，ErrorString为空
+	uint64  Sequence = 3;	//sequence number
+}
+
+
+message Feedback {
+	string	AppKey =1;  //客户编号
+	string	UserId =2;  //用户id
+	uint64	Id =3;      //消息Id（收件箱id）
+}
+
+message FeedbackAck {
+	int32	ErrorCode =1;       //返回值，正常为0
+	string	ErrorString =2;  //错误原因， 如果ErrorCode等于0，ErrorString为空
+}
+
+//重复登陆通知
+message DuplicateLogin {
+	string	AppKey =1;  //客户编号
+	string	Id =2;      //用户ID
+	uint32	Serverid = 3;	//access sever id
+	int64	Ts	= 4;		//时间戳
+}
+
+//心跳
+message HeartBeat {
+}
+
+message HeartBeatAck {
+}
+
+//消息同步
+message SyncMessage {
+	string	AppKey =1;  //客户编号
+	string	UserId =2;  //用户ID
+	uint64	Id =3;      //消息Id（收件箱id）
+}
+
+message SyncMessageAck {
+}
+
+//================================================================================================
+
+// 用户与接入服务器建立连接后, 需要首先发送该消息
+message InitReq {
+    string UserId = 1;
+    uint32 SrcType = 2;
+    string AppKey = 3;
+}
+
+// 针对InitReq的回复消息, 为本次认证过程提供nonce
+message InitRep {
+    string Nonce = 1;
+}
+
+// 用户收到nonce后, 按算法
+// hash(hash(password) + nonce) 生成 passphase
+// 然后向接入服务器发送AuthReq
+message AuthReq {
+    string Passphase = 1;
+}
+
+// 对用户的回复
+// 用户发送AuthReq和SendMessage包都会收到这个回复包
+message GeneralReply {
+    int32	ErrorCode =1;       //返回值，正常为0
+	string	ErrorString =2;  //错误原因， 如果ErrorCode等于0，ErrorString为空
+}
+
+enum MessageId {
+	MsgTypeInitReq = 0; // 用户报告自身id/appkey等, 请求nonce
+	MsgTypeInitRep = 1;
+	MsgTypeAuthReq = 2; // 用户使用passphase认证
+	MsgTypeAuthRep = 3;
+	MsgTypeSendReq = 4; // 用户请求发送SendMessage
+	MsgTypeSendRep = 5;
+	MsgFeedbackReq = 6; // 用户请求发送Feedback
+	MsgFeedbackRep = 7;
+	MsgSendToUsr = 8; // 向用户发送的Message
+	MsgUserPing = 9; // 向用户发送的Message
+	MsgUserPong = 10; // 向用户发送的Message
+	MsgConnectionClosed = 11;//连接断开
+	MsgTypeGetKeyReq = 12;//用户上传文件必须先获取key
+	MsgTypeGetKeyRep = 13;
+}
+
+enum CloseFlag {
+	UserMadeClose  = 0; // 用户主动关闭连接 -- 可能是客户端异常或页面关闭、刷新等
+	TimeoutClose   = 1; // 用户超时无响应而断开 -- 可能是与客户端的网络中断
+	DuplicateClose = 2; // 重复登录引起的断开
+}
