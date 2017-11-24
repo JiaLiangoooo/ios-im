@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
   s.name         = "ios-im"
-  s.version      = "0.2"
-  s.summary      = "iOS-im 的Pod库"
+  s.version      = "0.3"
+  s.summary      = "yinjialiang 的Pod库"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/yinjialiang1993/ios-im.git", :tag => "0.2" }
+  s.source       = { :git => "https://github.com/yinjialiang1993/ios-im.git", :tag => "0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
